@@ -9,8 +9,47 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView{
+            List{
+                HStack{
+                    Text("SwiftUILesson01")
+                        .font(.title)
+                    Text(".font(.title)を使用")
+                }
+                
+                HStack {
+                    Text("SwiftUILesson02")
+                        .font(.system(size: 30))
+                        .fontWeight(.bold)
+                    Text(".font(.system(size: 30)).fontWeight(.bold)を使用")
+                }.padding(.vertical, 40)
+                
+                HStack {
+                    Text("SwiftUILesson03")
+                        .font(.title2)
+                        .foregroundColor(.green)
+                    Text(".font(.title2).foregroundColor(.green)を使用")
+                }.padding(.vertical, 20)
+                
+                VStack {
+                    Text("SwiftUILesson04").frame(width: 375, height: 100).border(Color.orange, width: 10)
+                    Text(".frame(width:375,height:100).border(Color.orange, width: 10)を使用").frame(width:375)
+                }.padding(.vertical, 30)
+                
+                HStack {
+                    Text("SwiftUILesson05").font(.headline).foregroundColor(.orange)
+                    
+                    Text(".font(.headline).foregroundColor(.orange)を使用")
+                }.padding(.vertical, 30)
+                
+                VStack {
+                    Text("SwiftUILesson06").font(.largeTitle).bold().foregroundColor(.red)
+                    Text(".font(.largeTitle).bold().foregroundColor(.red)を使用").padding(.top, 20)
+                }.padding(.vertical, 30)
+                
+            }.navigationTitle("Text復習")
+        }
     }
 }
 
