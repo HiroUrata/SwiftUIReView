@@ -91,7 +91,7 @@ struct ReViewImage02:View {
                 .border(Color.green, width: 5.0)
                 .padding([.bottom,.leading], 30)
             
-            Text(".resizable().frame(width: 350, height: 100).scaleEffect(1.5)")
+            Text(".resizable().frame(width: 200, height: 100).aspectRatio(contentMode: .fill).offset(x: 40.0, y: -30).border(Color.green, width: 5.0).padding([.bottom,.leading], 30)")
             
         }
     }
